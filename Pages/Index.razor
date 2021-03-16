@@ -1,7 +1,24 @@
 ﻿@page "/"
+@inject HttpClient Http
+<h1>
+    Welcome to Greatsteve Remsklad
+</h1>
+<button class="btn btn-primary" @onclick="UpdateDatabase">UpdateDatabase</button>
 
-<h1>Hello, world!</h1>
+@if (responce?.StatusCode.ToString() == "OK")
+{
+    @code{string success = $"Database updated successfully : { DateTime.Now}";
+    }
+    <h2>@success</h2>
+ }
 
-Welcome to your new app.
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+@code {
+    HttpResponseMessage responce;
+    protected async Task UpdateDatabase()
+    {
+        responce = await Http.PostAsync("https://localhost:5001/warehouse/UpdateDatabase", null);
+    }
+
+}
+

@@ -1,0 +1,48 @@
+﻿@page "/main-cameras"
+@inject HttpClient Http
+
+@if (items == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Article</th>
+                <th>Name</th>
+                <th>Residue</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in items)
+            {
+                <tr>
+                    <td>@item.article</td>
+                    <td>@item.title</td>
+                    <td>@item.residue</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private WaregouseItems[] items;
+
+    protected override async Task OnInitializedAsync()
+    {
+        items = await Http.GetFromJsonAsync<WaregouseItems[]>("https://localhost:5001/warehouse/main-cameras");
+    }
+
+    public class WaregouseItems
+    {
+        public string code { get; set; }
+        public string title { get; set; }
+        public string article { get; set; }
+        public double residue { get; set; }
+    }
+}
