@@ -1144,24 +1144,31 @@
     ]
   },
   "packageFolders": {
-    "/Users/rewq95/.nuget/packages/": {}
+    "C:\\Users\\GS\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/rewq95/Documents/Projects/RemskladBLW/RemskladBLW.csproj",
+      "projectUniqueName": "C:\\Users\\GS\\Documents\\GitHub\\RemskladBlazorWasm\\RemskladBLW.csproj",
       "projectName": "RemskladBLW",
-      "projectPath": "/Users/rewq95/Documents/Projects/RemskladBLW/RemskladBLW.csproj",
-      "packagesPath": "/Users/rewq95/.nuget/packages/",
-      "outputPath": "/Users/rewq95/Documents/Projects/RemskladBLW/obj/",
+      "projectPath": "C:\\Users\\GS\\Documents\\GitHub\\RemskladBlazorWasm\\RemskladBLW.csproj",
+      "packagesPath": "C:\\Users\\GS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\GS\\Documents\\GitHub\\RemskladBlazorWasm\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/rewq95/.config/NuGet/NuGet.Config"
+        "C:\\Users\\GS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1207,7 +1214,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.NETCore.App.Runtime.browser-wasm",
-            "version": "[5.0.2, 5.0.2]"
+            "version": "[5.0.5, 5.0.5]"
           }
         ],
         "frameworkReferences": {
@@ -1215,7 +1222,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
